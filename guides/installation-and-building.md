@@ -19,19 +19,18 @@ These are platforms for which I'll provide binaries at the time of the release.
 | Linux          | aarch64 | Static build for cross-distro compatibility |
 | Windows        | x86-64  |                                             |
 | MacOS (darwin) | x86-64  |                                             |
-| MacOS (darwin) | arm64   |                                             |
 
 If you have access to an unsupported architecture, and would like to contribute the binary, please write me (oss /AT/ germanorizzo /DOT/ it).
 
 ### Building & Testing
+
+#### Main app
 
 Pupcloud is a Go(lang) program, that uses Go 1.18 and CGO (for a dependency). If you are not familiar with this, please read a guide on [compiling with CGO](https://go.dev/doc/install/gccgo); the Go toolset makes it very convenient, but there are some prerequisites.
 
 * Go 1.18
 * Make
 * A compile toolchain (e.g. GCC)
-
-It also needs nodeJS and NPM to compile the Svelte-based Web UI.
 
 I included a Make file to script the building under Linux/MacOS, so if you have all the prerequisites it should be a matter of:
 
@@ -55,6 +54,14 @@ cd src
 go build
 ```
 
-The sources include a precompiled version of the Web UI, so under Windows it isn't necessary to have node or NPM installed.
+The sources include a precompiled version of the Web UI.
 
-And this should be all.
+#### Web UI
+
+If you want to rebuild the Web UI, you'll need also to install NodeJS and NPM. Then the command to use is:
+
+```
+make build-ui
+```
+
+This will build it and also copy the result to the proper directory where a `make build` will look for it and generate the binary.
