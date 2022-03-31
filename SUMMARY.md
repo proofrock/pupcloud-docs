@@ -1,0 +1,17 @@
+# Table of contents
+
+* [🐶 Pupcloud](README.md)
+  * [🥇 Features](pupcloud/features.md)
+  * [🎬 Credits](pupcloud/credits.md)
+  * [🐛 Known Issues](pupcloud/known-issues.md)
+* [🦮 Guides](guides/README.md)
+  * [🏗 Installation & Building](guides/installation-and-building.md)
+  * [🏃♂ Running Pupcloud](guides/running-pupcloud.md)
+  * [🎒 Basic Usage](guides/basic-usage.md)
+  * [🗝 Authentication](guides/authentication.md)
+  * [🤝 Sharing a Folder](guides/sharing-a-folder.md)
+  * [🔙 Reverse Proxy](guides/reverse-proxy.md)
+* [🛡 Security](security.md)
+* [🐳 Docker](docker.md)
+* [🍟 Demo App](http://pupcloud.vercel.app)
+* [👷 GitHub Repository](https://github.com/proofrock/pupcloud)
