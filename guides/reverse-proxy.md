@@ -2,7 +2,9 @@
 
 Running a reverse proxy in front of pupcloud is almost mandatory if you want to expose it on the internet. More than that, there are a number of reverse proxies that allow you to protect a http connection with https, using a free certificate provided for example by [Let's Encrypt](https://letsencrypt.org) or similar.
 
-Read more here.
+{% hint style="warning" %}
+For authentication, a custom HTTP header is used, `x-pupcloud-pwd`. Be sure that the reverse proxy passes it untouched.
+{% endhint %}
 
 We'll show here how to integrate with two popular solutions, [Caddy](https://caddyserver.com) and [NGINX](https://www.nginx.com).
 

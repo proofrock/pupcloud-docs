@@ -1,6 +1,8 @@
 # 🗝 Authentication
 
-You can set a password for accessing pupcloud, by using the `-P` parameter on the commandline. You must provide the SHA-256 sum of the password you want to use, in hex format.
+You can set a password for accessing pupcloud, by using the `-P` or `-H` parameter on the commandline.
+
+Using `-P`, you can specify the password in plain text. There is a more secure option, `-H`, using which you must provide the SHA-256 sum of the password you want to use, in (lowercase) hex format.
 
 You can provide the whole hash, or just the first part, of any length you want to keep the commandline short. Of course, the longer the hash, the safer the system.
 

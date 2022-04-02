@@ -10,7 +10,7 @@ pupcloud -r /my/dir
 
 Then, open `http://localhost:17178` with a browser. As simple as that!
 
-Run`pupcloud --help` to see the other configuration options:&#x20;
+Run`pupcloud --help` to see the other configuration options:
 
 ```
 Pupcloud v0.6.x (c) 2022 Germano Rizzo
@@ -30,7 +30,7 @@ Usage of bin/pupcloud:
 ```
 
 * disable all the write operations (`--readonly`);
-* setup [authentication ](authentication.md)(`-P`);
+* setup [authentication ](authentication.md)(`-P` or `-H`);
 * setup [folder sharing](sharing-a-folder.md) (`--share-profile`, `--share-port`, `--share-prefix`)
 * specify a title/header for the web UI page (`--title`);
 * use a different port then the default of 17178 (`-p`);

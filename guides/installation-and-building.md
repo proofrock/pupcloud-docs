@@ -12,39 +12,33 @@ Either way, you'll have a single binary (albeit a little bulky). [Take it for a 
 
 These are platforms for which I'll provide binaries at the time of the release.
 
-| OS             | Arch    | Notes                                       |
-| -------------- | ------- | ------------------------------------------- |
-| Linux          | x86-64  | Static build for cross-distro compatibility |
-| Linux          | armv7hf | Static build for cross-distro compatibility |
-| Linux          | aarch64 | Static build for cross-distro compatibility |
-| Windows        | x86-64  |                                             |
-| MacOS (darwin) | x86-64  |                                             |
+| OS             | Arch  | Notes                                       |
+| -------------- | ----- | ------------------------------------------- |
+| Linux          | amd64 | Static build for cross-distro compatibility |
+| Linux          | arm   | Static build for cross-distro compatibility |
+| Linux          | arm64 | Static build for cross-distro compatibility |
+| Windows        | amd64 |                                             |
+| MacOS (darwin) | amd64 |                                             |
+| MacOS (darwin) | arm64 |                                             |
 
-If you have access to an unsupported architecture, and would like to contribute the binary, please write me (oss /AT/ germanorizzo /DOT/ it).
+Binaries are built using Go cross-compile capabilities, I don't have access to all the infrastructure needed to properly test all of them. Please report any inconsistency.
 
 ### Building & Testing
 
 #### Main app
 
-Pupcloud is a Go(lang) program, that uses Go 1.18 and CGO (for a dependency). If you are not familiar with this, please read a guide on [compiling with CGO](https://go.dev/doc/install/gccgo); the Go toolset makes it very convenient, but there are some prerequisites.
+Pupcloud is a Go(lang) program, that uses Go 1.18. There are some basic prerequisites.
 
 * Go 1.18
 * Make
-* A compile toolchain (e.g. GCC)
 
 I included a Make file to script the building under Linux/MacOS, so if you have all the prerequisites it should be a matter of:
 
 ```bash
 git clone https://github.com/proofrock/pupcloud
 cd pupcloud
-make build # or build-static
+make build # or build-static, under Linux
 # You will find the binary in the bin/ directory.
-```
-
-For MacOS replace Line 3 with:
-
-```bash
-make build
 ```
 
 For Windows, instead of the step at Line 3 do:
