@@ -1,5 +1,5 @@
 ---
-description: Put your files on the web!
+description: Put your files on the browser!
 ---
 
 # 🐶 Pupcloud
