@@ -6,7 +6,7 @@ Installation consists of a single executable file. Head to the [releases](https:
 
 If there are no files for your OS/arch, look into building it yourself, see below.
 
-Either way, you'll have a single binary (albeit a little bulky). [Take it for a walk](running-pupcloud.md)!
+Either way, you'll have a single binary (albeit a little bulky). [Take it for a walk](running-pupcloud/)!
 
 #### Supported platforms
 

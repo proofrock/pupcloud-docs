@@ -1,6 +1,6 @@
 # 🏃♂ Running Pupcloud
 
-Pupcloud is distributed as a single executable file. [Download and unpack the proper file for your OS/arch](installation-and-building.md#installation).
+Pupcloud is distributed as a single executable file. [Download and unpack the proper file for your OS/arch](../installation-and-building.md#installation).
 
 Once done, just execute it with the directory to serve as an argument:
 
@@ -32,8 +32,8 @@ Usage of pupcloud:
 ```
 
 * disable all the write operations (`--readonly`);
-* setup [authentication ](authentication.md)(`-P` or `-H`);
-* setup [folder sharing](sharing-a-folder.md) (`--share-profile`, `--share-port`, `--share-prefix`)
+* setup [authentication ](../authentication.md)(`-P` or `-H`);
+* setup [folder sharing](../sharing-a-folder.md) (`--share-profile`, `--share-port`, `--share-prefix`)
 * specify a title/header for the web UI page (`--title`);
 * use a different port then the default of 17178 (`-p`);
 * bind to a network interface (`--bind-to`);
