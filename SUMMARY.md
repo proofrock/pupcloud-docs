@@ -8,7 +8,7 @@
   * [🏗 Installation & Building](guides/installation-and-building.md)
   * [🏃♂ Running Pupcloud](guides/running-pupcloud/README.md)
     * [🐳 Docker](guides/running-pupcloud/docker.md)
-    * [⌨ Systemd Service](guides/running-pupcloud/systemd-service.md)
+    * [💻 Systemd Service](guides/running-pupcloud/systemd-service.md)
   * [🎒 Basic Usage](guides/basic-usage.md)
   * [🗝 Authentication](guides/authentication.md)
   * [🤝 Sharing a Folder](guides/sharing-a-folder.md)

@@ -9,11 +9,17 @@ In order to set up a share, one or more _profiles_ must be specified. Each profi
 Relevant CLI parameters are:
 
 * `--share-profile`: a share profile, in the form _name_:_secret_ (e.g. `Family:abc0123`). Can be repeated for more profiles.
+* `--share-profiles`: the same, but multiple values are comma-separated.
 * `--share-port`: the port for the share server; by default `17179`;
 * `--share-prefix`: useful when using a reverse proxy, it's the base URL of the share link. By default, `http://localhost:17179`.
 
 {% hint style="info" %}
-If you need to specify more than one profile, you can repeat the parameter `--share-profile`.
+If you need to specify more than one profile, you can:
+
+* &#x20;repeat the parameter `--share-profile`;
+* use `--share-profiles` with comma-separated values.
+
+Note that if a key or a value must contain a comma, you are restricted to the first possibility.
 {% endhint %}
 
 Sharing is enabled if at least one profile is defined.
