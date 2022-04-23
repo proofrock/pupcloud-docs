@@ -4,9 +4,7 @@ Official docker image available, for x86\_64 (amd64), arm and arm64 (aarch64). S
 
 ### Docker image
 
-The image is based on Alpine.
-
-It's available for amd64, ARM and ARM64. Append `-arm` or `-arm64` to the usual tags (e.g. `:latest-arm`, `:0.7.0-arm` or `0.7.0-arm64`).
+The image is based on Alpine. It's a multiarch image for amd64, ARM and ARM64.
 
 Here are the relevant configurations:
 
