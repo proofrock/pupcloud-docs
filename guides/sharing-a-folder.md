@@ -12,6 +12,10 @@ Relevant CLI parameters are:
 * `--share-port`: the port for the share server; by default `17179`;
 * `--share-prefix`: useful when using a reverse proxy, it's the base URL of the share link. By default, `http://localhost:17179`.
 
+{% hint style="info" %}
+If you need to specify more than one profile, you can repeat the parameter `--share-profile`.
+{% endhint %}
+
 Sharing is enabled if at least one profile is defined.
 
 ### Web UI
