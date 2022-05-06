@@ -2,12 +2,12 @@
 
 ### Installation
 
-Installation consists of a single executable file. Head to the [releases](https://github.com/proofrock/pupcloud/releases) page on GitHub, and download the compressed file relevant for your OS and architecture; then extract it with a 7-zip compatible client.
+Installation consists of a single executable file. Head to the [releases](https://github.com/proofrock/pupcloud/releases) page on GitHub, and download the compressed file relevant for your OS and architecture; then extract it with a `tar` or `zip` compatible client (depending on your OS).
 
 ```bash
 # This example shows the steps required to get the binary on your Linux system 
-wget https://github.com/proofrock/pupcloud/releases/download/v0.7.2/pupcloud-v0.7.2-linux-amd64.7z
-7zr e pupcloud-v0.7.2-linux-amd64.7z
+wget https://github.com/proofrock/pupcloud/releases/download/v0.7.2/pupcloud-v0.8.0-linux-amd64.tar.gz
+tar xzf pupcloud-v0.8.0-linux-amd64.tar.gz
 ```
 
 If there are no files for your OS/arch, look into building it yourself, see below.
@@ -24,8 +24,10 @@ These are platforms for which I'll provide binaries at the time of the release.
 | Linux          | arm   | Static build for cross-distro compatibility |
 | Linux          | arm64 | Static build for cross-distro compatibility |
 | Windows        | amd64 |                                             |
+| Windows        | arm64 |                                             |
 | MacOS (darwin) | amd64 |                                             |
 | MacOS (darwin) | arm64 |                                             |
+| FreeBSD        | amd64 |                                             |
 
 Binaries are built using Go cross-compile capabilities, I don't have access to all the infrastructure needed to properly test all of them. Please report any inconsistency.
 
@@ -33,7 +35,7 @@ Binaries are built using Go cross-compile capabilities, I don't have access to a
 
 #### Main app
 
-Pupcloud is a Go(lang) program, that uses Go 1.18. There are some basic prerequisites.
+Pupcloud is a Go(lang) program, it uses Go 1.18. There are some basic prerequisites.
 
 * Go 1.18
 * Make
