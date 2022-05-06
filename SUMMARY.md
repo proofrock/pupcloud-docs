@@ -6,7 +6,7 @@
   * [🐛 Known Issues](pupcloud/known-issues.md)
 * [🦮 Guides](guides/README.md)
   * [🏗 Installation & Building](guides/installation-and-building.md)
-  * [🏃♂ Running Pupcloud](guides/running-pupcloud/README.md)
+  * [🏃 Running Pupcloud](guides/running-pupcloud/README.md)
     * [🐳 Docker](guides/running-pupcloud/docker.md)
     * [💻 Systemd Service](guides/running-pupcloud/systemd-service.md)
   * [🎒 Basic Usage](guides/basic-usage.md)

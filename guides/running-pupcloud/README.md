@@ -1,4 +1,4 @@
-# 🏃♂ Running Pupcloud
+# 🏃 Running Pupcloud
 
 Pupcloud is distributed as a single executable file. [Download and unpack the proper file for your OS/arch](../installation-and-building.md#installation).
 
@@ -14,8 +14,8 @@ Run`pupcloud --help` to see the other configuration options:
 
 ```
 Pupcloud v0.8.0 (c) 2022 Germano Rizzo
-unknown shorthand flag: 'v' in -version
-Usage of pupcloud:
+Usage of ./pupcloud:
+  -E, --allow-edits                 Allows changes to FS (default: don't)
       --allow-root                  Allow launching as root (default: don't)
       --bind-to string              The address to bind to (default "0.0.0.0")
       --follow-symlinks             Follow symlinks when traversing directories (default: don't)
@@ -23,16 +23,15 @@ Usage of pupcloud:
   -P, --password string             The main access password, if desired. Use --pwd-hash for a safer alternative
   -p, --port int                    The port to run on (default 17178)
   -H, --pwd-hash string             SHA256 hash of the main access password, if desired
-      --readonly                    Disallow all changes to FS (default: don't)
   -r, --root string                 The document root to serve
       --share-port int              The port of the sharing interface (default 17179)
       --share-prefix string         The base URL of the sharing interface (default: 'http://localhost:' + the port)
       --share-profile stringArray   Profile for sharing, in the form name:secret, multiple profiles allowed
-      --share-profiles string       Profiles for sharing, in the form name:secret, multiple profiles comma-separated 
+      --share-profiles string       Profiles for sharing, in the form name:secret, multiple profiles comma-separated
       --title string                Title of the window (default "🐶 Pupcloud")
 ```
 
-* disable all the write operations (`--readonly`);
+* enable "write" operations (delete/cut/paste/upload...;`-E` or `--allow-edits`);
 * setup [authentication ](../authentication.md)(`-P` or `-H`);
 * setup [folder sharing](../sharing-a-folder.md) (`--share-profile`/`--share-profiles`, `--share-port`, `--share-prefix`)
 * specify a title/header for the web UI page (`--title`);
@@ -49,23 +48,23 @@ Every CLI parameter can be specified via environment variable. If the correspond
 
 Env vars are mapped to CLI params as such:
 
-| CLI Parameter       | Environment Variable | Example                               |
-| ------------------- | -------------------- | ------------------------------------- |
-| `--root`, `-r`      | `ROOT`               | `ROOT=./`                             |
-| `--bind-to`         | `BIND_TO`            | `BIND_TO=192.168.1.0`                 |
-| `--port`, `-p`      | `PORT`               | `PORT=8080`                           |
-| `--title`           | `TITLE`              | `TITLE=WowSite`                       |
-| `--password`, `-P`  | `PASSWORD`           | `PASSWORD=ciao`                       |
-| `--pwd-hash`, `-H`  | `PWD_HASH`           | `PWD_HASH=5302bf`                     |
-| `--readonly`        | `READONLY`           | `READONLY=1`                          |
-| `--share-profile`   | _nothing_            |                                       |
-| `--share-profiles`  | `SHARE_PROFILES`     | `SHARE_PROFILES=k1:v1,k2:v2`          |
-| `--share-prefix`    | `SHARE_PREFIX`       | `SHARE_PREFIX=http://localhost:12345` |
-| `--share-port`      | `SHARE_PORT`         | `SHARE_PORT=12345`                    |
-| `--max-upload-size` | `MAX_UPLOAD_SIZE`    | `MAX_UPLOAD_SIZE=64`                  |
-| `--allow-root`      | `ALLOW_ROOT`         | `ALLOW_ROOT=1`                        |
-| `--follow-symlinks` | `FOLLOW_SYMLINKS`    | `FOLLOW_SYMLINKS=1`                   |
+| CLI Parameter         | Environment Variable | Example                               |
+| --------------------- | -------------------- | ------------------------------------- |
+| `--root`, `-r`        | `ROOT`               | `ROOT=./`                             |
+| `--bind-to`           | `BIND_TO`            | `BIND_TO=192.168.1.0`                 |
+| `--port`, `-p`        | `PORT`               | `PORT=8080`                           |
+| `--title`             | `TITLE`              | `TITLE=WowSite`                       |
+| `--password`, `-P`    | `PASSWORD`           | `PASSWORD=ciao`                       |
+| `--pwd-hash`, `-H`    | `PWD_HASH`           | `PWD_HASH=5302bf`                     |
+| `--allow-edits`, `-E` | `ALLOW_EDITS`        | `ALLOW_EDITS=1`                       |
+| `--share-profile`     | _nothing_            |                                       |
+| `--share-profiles`    | `SHARE_PROFILES`     | `SHARE_PROFILES=k1:v1,k2:v2`          |
+| `--share-prefix`      | `SHARE_PREFIX`       | `SHARE_PREFIX=http://localhost:12345` |
+| `--share-port`        | `SHARE_PORT`         | `SHARE_PORT=12345`                    |
+| `--max-upload-size`   | `MAX_UPLOAD_SIZE`    | `MAX_UPLOAD_SIZE=64`                  |
+| `--allow-root`        | `ALLOW_ROOT`         | `ALLOW_ROOT=1`                        |
+| `--follow-symlinks`   | `FOLLOW_SYMLINKS`    | `FOLLOW_SYMLINKS=1`                   |
 
 {% hint style="warning" %}
-The boolean env vars (`READONLY`, `ALLOW_ROOT`, `FOLLOW_SYMLINKS`) are considered only when they are enabled, i.e. set to `1`. They cannot be used to deactivate a CLI parameter.
+The boolean env vars (`ALLOW_EDITS`, `ALLOW_ROOT`, `FOLLOW_SYMLINKS`) are considered only when they are enabled, i.e. set to `1`. They cannot be used to deactivate a CLI parameter.
 {% endhint %}
