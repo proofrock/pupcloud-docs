@@ -71,7 +71,7 @@ The boolean env vars (`PUP_ALLOW_EDITS`, `PUP_ALLOW_ROOT`, `PUP_FOLLOW_SYMLINKS`
 
 ### Write a "config file"
 
-Pupcloud can't be configured with a config file. It's an explicit design choice, I wanted to limit all the "cruft" normally involved in installing an application... to the extreme. One day this might change though (see [Issue #20](https://github.com/proofrock/pupcloud/issues/20) for a short discussion).
+Pupcloud can't be configured with a config file. It's an explicit design choice, I wanted to limit all the "cruft" normally involved in installing an application... to the extreme. One day this might change though (see [Discussion #26](https://github.com/proofrock/pupcloud/discussions/26) for a short discussion).
 
 For now, what _can_ be done is to use the env vars to build a shell script that looks like a config file; something like:
 
