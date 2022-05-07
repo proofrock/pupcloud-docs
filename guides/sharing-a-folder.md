@@ -37,7 +37,7 @@ From here you can set:
 3. If the share must be read-only;
 4. An expiry date (optional).
 
-Pressing then the button at 5, a link will be generated and copied to the clipboard.
+Pressing then the button at 5, a link will be generated and shown below. You can then copy-paste and share it.
 
 {% hint style="info" %}
 If the main app is launched as read-only, all its share links will be read-only. The switch is still enabled, because if in the future the app will be re-launched as read/write, the link will be read/write.
