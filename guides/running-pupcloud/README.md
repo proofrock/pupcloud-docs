@@ -66,5 +66,5 @@ Env vars are mapped to CLI params as such:
 | `--follow-symlinks`   | `PUP_FOLLOW_SYMLINKS` | `PUP_FOLLOW_SYMLINKS=1`                   |
 
 {% hint style="warning" %}
-The boolean env vars (`ALLOW_EDITS`, `ALLOW_ROOT`, `FOLLOW_SYMLINKS`) are considered only when they are enabled, i.e. set to `1`. They cannot be used to deactivate a CLI parameter.
+The boolean env vars (`PUP_ALLOW_EDITS`, `PUP_ALLOW_ROOT`, `PUP_FOLLOW_SYMLINKS`) are considered only when they are enabled, i.e. set to `1`. They cannot be used to deactivate a CLI parameter.
 {% endhint %}
