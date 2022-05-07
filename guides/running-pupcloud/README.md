@@ -48,22 +48,22 @@ Every CLI parameter can be specified via environment variable. If the correspond
 
 Env vars are mapped to CLI params as such:
 
-| CLI Parameter         | Environment Variable | Example                               |
-| --------------------- | -------------------- | ------------------------------------- |
-| `--root`, `-r`        | `ROOT`               | `ROOT=./`                             |
-| `--bind-to`           | `BIND_TO`            | `BIND_TO=192.168.1.0`                 |
-| `--port`, `-p`        | `PORT`               | `PORT=8080`                           |
-| `--title`             | `TITLE`              | `TITLE=WowSite`                       |
-| `--password`, `-P`    | `PASSWORD`           | `PASSWORD=ciao`                       |
-| `--pwd-hash`, `-H`    | `PWD_HASH`           | `PWD_HASH=5302bf`                     |
-| `--allow-edits`, `-E` | `ALLOW_EDITS`        | `ALLOW_EDITS=1`                       |
-| `--share-profile`     | _nothing_            |                                       |
-| `--share-profiles`    | `SHARE_PROFILES`     | `SHARE_PROFILES=k1:v1,k2:v2`          |
-| `--share-prefix`      | `SHARE_PREFIX`       | `SHARE_PREFIX=http://localhost:12345` |
-| `--share-port`        | `SHARE_PORT`         | `SHARE_PORT=12345`                    |
-| `--max-upload-size`   | `MAX_UPLOAD_SIZE`    | `MAX_UPLOAD_SIZE=64`                  |
-| `--allow-root`        | `ALLOW_ROOT`         | `ALLOW_ROOT=1`                        |
-| `--follow-symlinks`   | `FOLLOW_SYMLINKS`    | `FOLLOW_SYMLINKS=1`                   |
+| CLI Parameter         | Environment Variable  | Example                                   |
+| --------------------- | --------------------- | ----------------------------------------- |
+| `--root`, `-r`        | `PUP_ROOT`            | `PUP_ROOT=./`                             |
+| `--bind-to`           | `PUP_BIND_TO`         | `PUP_BIND_TO=192.168.1.0`                 |
+| `--port`, `-p`        | `PUP_PORT`            | `PUP_PORT=8080`                           |
+| `--title`             | `PUP_TITLE`           | `PUP_TITLE=WowSite`                       |
+| `--password`, `-P`    | `PUP_PASSWORD`        | `PUP_PASSWORD=ciao`                       |
+| `--pwd-hash`, `-H`    | `PUP_PWD_HASH`        | `PUP_PWD_HASH=5302bf`                     |
+| `--allow-edits`, `-E` | `PUP_ALLOW_EDITS`     | `PUP_ALLOW_EDITS=1`                       |
+| `--share-profile`     | _nothing_             |                                           |
+| `--share-profiles`    | `PUP_SHARE_PROFILES`  | `PUP_SHARE_PROFILES=k1:v1,k2:v2`          |
+| `--share-prefix`      | `PUP_SHARE_PREFIX`    | `PUP_SHARE_PREFIX=http://localhost:12345` |
+| `--share-port`        | `PUP_SHARE_PORT`      | `PUP_SHARE_PORT=12345`                    |
+| `--max-upload-size`   | `PUP_MAX_UPLOAD_SIZE` | `PUP_MAX_UPLOAD_SIZE=64`                  |
+| `--allow-root`        | `PUP_ALLOW_ROOT`      | `PUP_ALLOW_ROOT=1`                        |
+| `--follow-symlinks`   | `PUP_FOLLOW_SYMLINKS` | `PUP_FOLLOW_SYMLINKS=1`                   |
 
 {% hint style="warning" %}
 The boolean env vars (`ALLOW_EDITS`, `ALLOW_ROOT`, `FOLLOW_SYMLINKS`) are considered only when they are enabled, i.e. set to `1`. They cannot be used to deactivate a CLI parameter.
