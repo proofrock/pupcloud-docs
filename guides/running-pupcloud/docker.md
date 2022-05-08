@@ -17,17 +17,17 @@ Here are the relevant configurations:
 
 Environment variables can be used to configure the various aspects of Pupcloud.
 
-| Variable                                 | Help                                                                         |
-| ---------------------------------------- | ---------------------------------------------------------------------------- |
-| `-e TITLE="PupWow"`                      | Title of the window                                                          |
-| `-e FOLLOW_SYMLINKS=1`                   | Follow symlinks when traversing directories                                  |
-| `-e MAX_UPLOAD_SIZE=64`                  | The max size of an upload, in MiB                                            |
-| `-e PASSWORD=ciao`                       | The main access password, if desired. Use --pwd-hash for a safer alternative |
-| `-e PWD_HASH=5302bf`                     | SHA256 hash of the main access password, if desired                          |
-| `-e READONLY=1`                          | Disallow all changes to FS                                                   |
-| `-e SHARE_PORT=12345`                    | The port of the sharing interface                                            |
-| `-e SHARE_PREFIX=http://localhost:12345` | The base URL of the sharing interface                                        |
-| `-e SHARE_PROFILES=k1:v1,k2:v2`          | Profiles for sharing, in the form name:secret                                |
+| Variable                                     | Help                                                                         |
+| -------------------------------------------- | ---------------------------------------------------------------------------- |
+| `-e PUP_TITLE="PupWow"`                      | Title of the window                                                          |
+| `-e PUP_FOLLOW_SYMLINKS=1`                   | Follow symlinks when traversing directories                                  |
+| `-e PUP_MAX_UPLOAD_SIZE=64`                  | The max size of an upload, in MiB                                            |
+| `-e PUP_PASSWORD=ciao`                       | The main access password, if desired. Use --pwd-hash for a safer alternative |
+| `-e PUP_PWD_HASH=5302bf`                     | SHA256 hash of the main access password, if desired                          |
+| `-e PUP_READONLY=1`                          | Disallow all changes to FS                                                   |
+| `-e PUP_SHARE_PORT=12345`                    | The port of the sharing interface                                            |
+| `-e PUP_SHARE_PREFIX=http://localhost:12345` | The base URL of the sharing interface                                        |
+| `-e PUP_SHARE_PROFILES=k1:v1,k2:v2`          | Profiles for sharing, in the form name:secret                                |
 
 See [Running Pupcloud](./) for more info, and other variables (use with caution, the ones listed here are the "safe" ones).
 
@@ -41,7 +41,7 @@ docker run -d \
  -v /mnt/DockerHome/myDir:/data \
  -e PID=1001 \
  -e PGID=1001 \
- -e TITLE="MyPupCloud!" \
+ -e PUP_TITLE="MyPupCloud!" \
  germanorizzo/pupcloud:latest
 ```
 
@@ -55,5 +55,5 @@ This command will install and run pupcloud, configuring it to:
 The rest of the lines in this example are standard Docker.
 
 {% hint style="warning" %}
-If you specify `FOLLOW_SYMLINKS`, please be aware that the links are resolved in the docker container, so the feature won't probably work. Use multiple bind/mounts inside `/data` instead.
+If you specify `PUP_FOLLOW_SYMLINKS`, please be aware that the links are resolved in the docker container, so the feature won't probably work. Use multiple bind/mounts inside `/data` instead.
 {% endhint %}
