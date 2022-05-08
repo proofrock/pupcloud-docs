@@ -6,7 +6,7 @@ Installation consists of a single executable file. Head to the [releases](https:
 
 ```bash
 # This example shows the steps required to get the binary on your Linux system 
-wget https://github.com/proofrock/pupcloud/releases/download/v0.7.2/pupcloud-v0.8.0-linux-amd64.tar.gz
+wget https://github.com/proofrock/pupcloud/releases/download/v0.8.0/pupcloud-v0.8.0-linux-amd64.tar.gz
 tar xzf pupcloud-v0.8.0-linux-amd64.tar.gz
 ```
 
