@@ -39,7 +39,7 @@ docker run -d \
  --name=pupcloud \
  -p 8080:17178 \
  -v /mnt/DockerHome/myDir:/data \
- -e PID=1001 \
+ -e PUID=1001 \
  -e PGID=1001 \
  -e PUP_TITLE="MyPupCloud!" \
  germanorizzo/pupcloud:latest
